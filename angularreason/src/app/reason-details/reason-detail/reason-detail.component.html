@@ -1,0 +1,188 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+  
+    <style>
+      .brdr {
+        border-style: inset;
+        border-radius: 12px;
+        border: 1px solid;
+  padding: 10px;
+  box-shadow: 9px 14px;
+        background-color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 440px;
+        height: 430px;
+        padding: 20px;
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
+      table, tr, td {
+        padding-left: 7px;
+        padding-top: 1px;
+      }
+  
+      input[type=text], select {
+        width: 100%;
+        padding: 6px 18px;
+        margin: 8px 0;
+        display:inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+        
+        
+      }
+      #startdate:hover
+      {
+        
+        box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+  cursor: pointer;
+
+      }
+      select:hover
+      {
+        
+        box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+  cursor: pointer;
+
+      }
+    </style>
+  </head>
+  
+  <body>
+    <form #form="ngForm" (submit)="onsubmit(form)">
+      <input type="hidden" name="id1" [value]="service.formdata.id1">
+      <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>Success...!</strong> Your data has been entered successfully.
+<button type="button" (click)="closeAlert()" class="close" data-dismiss="alert" aria-label="close">
+  <span aria-hidden="true">&times;</span>
+  </button>
+      </div>
+
+
+
+  <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error....!</strong> Please Enter All the fields!!
+    <button type="button" (click)="close()" class="close" data-dismiss="alert" aria-label="close">
+      <span aria-hidden="true">&times;</span>
+</button>
+
+      </div>
+
+  
+    <div class="brdr">
+
+  
+
+      <h4 style="margin-top:1px;">Add Leaves</h4>
+      <hr />
+      <div>
+        <table>
+          <tr>
+            <td>
+              Leave Start Date
+  
+            </td>
+            <td>
+              Leave End Date
+  
+            </td>
+          </tr>
+  
+          <tr>
+            
+            <td>
+              <input class="form-control" name="startdate2" #startdate2="ngModel" [(ngModel)]="service.formdata.startdate2" type="date"  id="startdate" >
+  
+            </td>
+  
+  
+            <td>
+              <input style="padding-left:8px;" name="enddate2"   #enddate2="ngModel" [(ngModel)]="service.formdata.enddate2" type="date" required class="form-control" id="startdate">
+  
+            </td>
+          </tr>
+  
+          <tr>
+            <td>
+              <br>
+              Process
+  
+            </td>
+            <td>
+              <br>
+              Approver
+  
+            </td>
+          </tr>
+  
+          <tr>
+            <td>
+  <div class="fom-control">
+              <select name="process2" #process2="ngModel"   [(ngModel)]="service.formdata.process2" id="country">
+                <option value="">~~SELECT~~</option>
+                <option value="NET">NET</option>
+                <option value="C">C</option>
+                <option value="Java">Java</option>
+               
+              </select>
+            </div>
+ 
+  
+  
+            </td>
+            <td>
+              <input class="form-control" type="text" placeholder="Manav Ratvani" readonly>
+            </td>
+          </tr>
+          <tr>
+            <td>Reason</td>
+  
+          </tr>
+          <tr>
+            <td colspan="2"><textarea class="form-control" name="reason2" #reason2="ngModel" [(ngModel)]="service.formdata.reason2" id="TextArea1" rows="2" cols="20"></textarea> </td>
+          </tr>
+  
+  
+        </table>
+        <hr />
+        <table>
+          <tr>
+            <td>
+              <button style="margin-left:260px;" type="reset"  class="btn btn-outline-danger">Cancel</button>
+            </td>
+            <td>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </td>
+          </tr>
+        </table>
+  
+  
+  
+      </div>
+    </div>
+    
+  
+  
+  
+  </form>
+  
+  
+  
+  
+  </body>
+  </html>
+  
+  
+  
+  
