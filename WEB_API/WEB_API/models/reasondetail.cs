@@ -10,13 +10,13 @@ namespace WEB_API.models
     
     public class reasondetail
     {
-        [Key]
+        [Key] 
        
         public int id1 { get; set; }
       
         [Required]
         [Column(TypeName = "varchar(10)")]
-        public string startdate2 { get; set; }
+        public string startdate2 { get; set; } 
         [Required]
         [Column(TypeName = "varchar(10)")]
         public string enddate2 { get; set; }

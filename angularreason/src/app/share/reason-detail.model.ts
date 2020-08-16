@@ -5,3 +5,4 @@ export class ReasonDetail {
     process2:string;
     reason2:string;
 }
+ 

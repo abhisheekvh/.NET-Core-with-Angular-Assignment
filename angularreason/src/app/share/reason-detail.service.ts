@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class ReasonDetailService {
-  formdata:ReasonDetail;
+  formdata:ReasonDetail; 
   readonly rooturl='http://localhost:62860/api'
 
   constructor(private http:HttpClient) { }

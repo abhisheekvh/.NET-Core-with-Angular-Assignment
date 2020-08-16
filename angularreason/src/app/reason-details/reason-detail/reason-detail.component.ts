@@ -17,7 +17,7 @@ export class ReasonDetailComponent implements OnInit {
   alert:boolean=false;
   error:boolean=false;
 
-
+ 
   
 
   ngOnInit() {

@@ -6,7 +6,7 @@ describe('ReasonDetailComponent', () => {
   let component: ReasonDetailComponent;
   let fixture: ComponentFixture<ReasonDetailComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async(() => { 
     TestBed.configureTestingModule({
       declarations: [ ReasonDetailComponent ]
     })

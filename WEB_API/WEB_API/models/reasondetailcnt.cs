@@ -12,7 +12,7 @@ namespace WEB_API.models
         public reasondetailcnt(DbContextOptions<reasondetailcnt>options):base(options)
         {
            
-
+              
         }
         public DbSet<reasondetail> reasondetails { get; set; }
         

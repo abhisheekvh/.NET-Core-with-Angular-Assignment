@@ -7,11 +7,11 @@ using Microsoft.Extensions.Logging;
 
 namespace WEB_API.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    [ApiController] 
+    [Route("[controller]")] 
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static readonly string[] Summaries = new[] 
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };

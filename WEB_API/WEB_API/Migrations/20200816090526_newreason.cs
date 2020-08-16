@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WEB_API.Migrations
-{
+{ 
     public partial class newreason : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,7 @@ namespace WEB_API.Migrations
                 {
                     table.PrimaryKey("PK_reasondetails", x => x.id1);
                 });
-        }
+        } 
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {

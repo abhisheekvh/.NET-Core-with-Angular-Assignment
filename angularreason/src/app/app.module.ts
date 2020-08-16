@@ -15,7 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
     
     ReasonDetailComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     AppRoutingModule,
     FormsModule,
